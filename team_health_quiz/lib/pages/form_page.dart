@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../utils/form.dart';
 import '../utils/question.dart';
+import '../UI/answer_button.dart';
+import '../UI/question_text.dart';
 
 class FormPage extends StatefulWidget {
   @override
@@ -16,45 +18,10 @@ class FormPageState extends State<FormPage> {
           new Column( // THis is the main page
             // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Expanded(
-                child: new Material(
-                  color: Colors.lightBlueAccent,
-                  child: new InkWell(
-                    onTap: () => print("Answered1"),
-                    child: new Center(
-                      child: new Container(
-                        child: new Text("Sad"),
-                      ),
-                    )
-                  ),
-                )
-              ),
-              new Expanded(
-                child: new Material(
-                  color: Colors.red,
-                  child: new InkWell(
-                    onTap: () => print("Answered2"),
-                    child: new Center(
-                      child: new Container(
-                        child: new Text("Ok"),
-                      ),
-                    )
-                  ),
-                )
-              ),
-                new Expanded(
-                child: new Material(
-                  color: Colors.lightGreenAccent,
-                  child: new InkWell(
-                    onTap: () => print("Answered3"),
-                    child: new Center(
-                      child: new Container(
-                        child: new Text("Happy"),
-                      ),
-                    )
-                  ),
-                )
-              )
+              new QuestionText(),
+              new AnswerButton(Colors.redAccent, 'Sad face'),
+              new AnswerButton(Colors.yellowAccent, 'Ok face'),
+              new AnswerButton(Colors.lightGreenAccent, 'Happy face'),
             ],
           )
         ],

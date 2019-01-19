@@ -1,10 +1,10 @@
 import './question.dart';
 
-class Form {
+class HealthCheckForm {
   List<Question> _questions;
   int _currentQuestionIndex = -1;
 
-  Form(this._questions) {
+  HealthCheckForm(this._questions) {
     _questions.shuffle();
   }
 
@@ -17,4 +17,6 @@ class Form {
     if (_currentQuestionIndex >= length) return null;
     return _questions[_currentQuestionIndex];
   }
+
+
 }

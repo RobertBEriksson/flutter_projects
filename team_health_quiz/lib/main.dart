@@ -5,7 +5,7 @@ import './pages/form_page.dart';
 
 void main() {
   runApp(new MaterialApp(
-    home: new FormPage(),
+    home: new LandingPage(),
   ));
 }
 

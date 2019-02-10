@@ -18,5 +18,9 @@ class HealthCheckForm {
     return _questions[_currentQuestionIndex];
   }
 
+  List<Question> get getQuestions { 
+    return _questions;
+  }
+
 
 }

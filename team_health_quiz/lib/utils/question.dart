@@ -1,12 +1,16 @@
 class Question {
   final String question;
-  final bool answer;
   int _points;
 
-  Question(this.question, this.answer);
+  Question(this.question);
 
   SetPoint(int points)
   {
     _points = points;
+  }
+
+  int GetPoint()
+  {
+    return _points;
   }
 }

@@ -16,17 +16,17 @@ class FormPageState extends State<FormPage> {
 
   Question currentQuestion;
   HealthCheckForm form = new HealthCheckForm([
-    new Question("Support", true),
-    new Question("Teamwork", false),
-    new Question("Pawns or Players", true),
-    new Question("Mission", true),
-    new Question("Quality", false),
-    new Question("Suitable process", true),
-    new Question("Delivering value", false),
-    new Question("Learning", true),
-    new Question("Speed", true),
-    new Question("Easy to release", false),
-    new Question("Fun", true),
+    new Question("Support"),
+    new Question("Teamwork"),
+    new Question("Pawns or Players"),
+    new Question("Mission"),
+    new Question("Quality"),
+    new Question("Suitable process"),
+    new Question("Delivering value"),
+    new Question("Learning"),
+    new Question("Speed"),
+    new Question("Easy to release"),
+    new Question("Fun"),
   ]);
   String questionText;
   int questionNumber;
@@ -45,7 +45,7 @@ class FormPageState extends State<FormPage> {
     isCorrect = true;
     currentQuestion.SetPoint(points);
 
-    this.setState(() {
+  this.setState(() {
       overlayShouldBeVisible = true;
     });
     print(["Hejsan handle aswer: " + currentQuestion.question + " points: " + points.toString()]);
@@ -67,7 +67,7 @@ class FormPageState extends State<FormPage> {
         overlayShouldBeVisible == true ? new AnswerOverlay(
           () {
             if (form.length == questionNumber) {
-              Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (BuildContext context) => new ScorePage(10, form.length)), (Route route) => route == null);
+              Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (BuildContext context) => new ScorePage(10, form.getQuestions)), (Route route) => route == null);
               return;
             }
             currentQuestion = form.nextQuestion;

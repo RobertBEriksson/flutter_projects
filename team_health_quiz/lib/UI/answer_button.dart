@@ -46,7 +46,7 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Expanded( // true button
+    return new Expanded(
       child: new Material(
         color: GetColor(_points),
         child: new InkWell(

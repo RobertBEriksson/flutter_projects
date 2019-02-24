@@ -47,7 +47,7 @@ class AnswerOverlayState extends State<AnswerOverlay> with SingleTickerProviderS
               ),
               child: new Transform.rotate(
                 angle: _iconAnimation.value * 6,
-                child: new Icon(Icons.done, size: _iconAnimation.value * 80.0,),
+                child: new Icon(Icons.insert_emoticon, size: _iconAnimation.value * 80.0,),
               ),
             ),
             new Padding(

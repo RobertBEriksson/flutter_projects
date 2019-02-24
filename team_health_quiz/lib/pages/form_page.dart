@@ -59,9 +59,9 @@ class FormPageState extends State<FormPage> {
         new Column( // THis is the main page
           children: <Widget>[
             new QuestionText(questionText, questionNumber),
-            new AnswerButton(1, true, () => handleAnswer(1)), //true button
-            new AnswerButton(2, false, () => handleAnswer(2)), // false button
             new AnswerButton(3, true, () => handleAnswer(3)), //true button
+            new AnswerButton(2, false, () => handleAnswer(2)), // false button
+            new AnswerButton(1, true, () => handleAnswer(1)), //true button
           ],
         ),
         overlayShouldBeVisible == true ? new AnswerOverlay(
